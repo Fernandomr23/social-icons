@@ -1,0 +1,111 @@
+/* ************ GOOGLE FONTS ************  */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+/* ************ GENERAL STYLES ************  */
+
+:root {
+    --color-IG: #ff197c;
+    --color-LD: #1A6BC4;
+    --color-X: #080808;
+    --color-YT: #ff1614;
+    --color-bg: #d7e0ec;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ************ SOCIAL ICONS ************  */
+
+body {
+    font-family: 'Sora', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(350deg, #fff, var(--color-bg));
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icon_box {
+    cursor: pointer;
+    position: relative;
+    font-size: 25px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    transition: .3s ease;
+}
+
+.tooltip {
+    position: absolute;
+    font-size: 12px;
+    top: 0;
+    opacity: 0;
+    background-color: #fff;
+    padding: 5px 8px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+    transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    background-color: #fff;
+    left: 50%;
+    bottom: -2px;
+    transform: translate(-50%) rotate(45deg);
+    transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon_box:hover .tooltip {
+    top: -40px;
+    opacity: 1;
+}
+
+.LD:hover, 
+.LD:hover .tooltip,
+.LD:hover .tooltip::after {
+    background-color: var(--color-LD);
+    color: #fff;
+}
+
+.IG:hover, 
+.IG:hover .tooltip,
+.IG:hover .tooltip::after {
+    background-color: var(--color-IG);
+    color: #fff;
+}
+
+.YT:hover, 
+.YT:hover .tooltip,
+.YT:hover .tooltip::after {
+    background-color: var(--color-YT);
+    color: #fff;
+}
+
+.X:hover, 
+.X:hover .tooltip,
+.X:hover .tooltip::after {
+    background-color: var(--color-X);
+    color: #fff;
+}
